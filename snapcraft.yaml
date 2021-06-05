@@ -5,6 +5,7 @@ description: >
 version: '1.0'
 
 grade: stable
+base: core18
 confinement: strict
 
 apps:
