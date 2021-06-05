@@ -10,7 +10,7 @@ confinement: strict
 
 apps:
   cisco-configuration-downloader:
-    command: cisco-configuration-downloader
+    command: bin/ccd.sh
     plugs:
       - home
 
@@ -18,3 +18,5 @@ parts:
   cisco-configuration-downloader:
     source: .
     plugin: dump
+    organize:
+      ccd.sh: bin/
