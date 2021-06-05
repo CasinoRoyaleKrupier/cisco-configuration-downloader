@@ -9,7 +9,7 @@ confinement: strict
 
 apps:
   cisco-configuration-downloader:
-    command: ccd.sh
+    command: cisco-configuration-downloader.sh
     plugs:
       - home
 
