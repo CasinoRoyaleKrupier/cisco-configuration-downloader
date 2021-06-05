@@ -1,0 +1,19 @@
+name: cisco-configuration-downloader
+summary: Cisco configuration downloader
+description: >
+  Cisco configuration downloader
+version: '1.0'
+
+grade: stable
+confinement: strict
+
+apps:
+  cisco-configuration-downloader:
+    command: ccd.sh
+    plugs:
+      - home
+
+parts:
+  cisco-configuration-downloader:
+    source: .
+    plugin: dump
