@@ -1,4 +1,4 @@
-name: Cisco configuration downloader
+name: cisco-configuration-downloader
 version: 1.0
 summary: A program for downloading configuration from Cisco devices.
 description: |
