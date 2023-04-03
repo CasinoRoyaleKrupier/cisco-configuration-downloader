@@ -13,10 +13,12 @@ license: GPL-2.0
 apps:
   cisco-configuration-downloader:
     command: ccd
+    plugs:
+      - network-bind
+      - home
 
 parts:
   ccd:
-    plugin: nil
     source: .
     build-packages: [bash]
     install: |
