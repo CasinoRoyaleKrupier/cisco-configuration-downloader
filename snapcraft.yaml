@@ -9,15 +9,14 @@ grade: stable
 confinement: strict
 
 apps:
-  nazwa-mojej-aplikacji:
-    command: usr/bin/bash $SNAP/bin/ccd.sh
-    plugs: [home, network]
+  ccd:
+    command: bin/ccd.sh
 
 parts:
-  moj-skrypt:
+  skrypt-bash:
     plugin: nil
+    stage-packages:
+      - bash
     source: .
-    build-packages: [bash]
-    install: |
-      mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
-      cp src/ccd.sh $SNAPCRAFT_PART_INSTALL/bin/
+    organize:
+      'ccd.sh': bin/ccd.sh
