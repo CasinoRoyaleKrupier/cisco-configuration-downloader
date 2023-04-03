@@ -19,6 +19,7 @@ apps:
 
 parts:
   ccd:
+    plugin: nil
     source: .
     build-packages: [bash]
     install: |
