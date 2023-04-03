@@ -12,7 +12,7 @@ license: GPL-2.0
 
 apps:
   cisco-configuration-downloader:
-    command: ccd
+    command: cisco-configuration-downloader
     plugs:
       - network-bind
       - home
