@@ -22,6 +22,3 @@ parts:
     plugin: nil
     source: .
     build-packages: [bash]
-    install: |
-      mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
-      cp ccd.sh $SNAPCRAFT_PART_INSTALL/bin/
