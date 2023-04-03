@@ -10,7 +10,7 @@ confinement: strict
 
 apps:
   nazwa-mojej-aplikacji:
-    command: usr/bin/bash $SNAP/bin/ccd
+    command: usr/bin/bash $SNAP/bin/ccd.sh
     plugs: [home, network]
 
 parts:
@@ -20,4 +20,4 @@ parts:
     build-packages: [bash]
     install: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
-      cp src/ccd $SNAPCRAFT_PART_INSTALL/bin/
+      cp src/ccd.sh $SNAPCRAFT_PART_INSTALL/bin/
