@@ -10,13 +10,8 @@ confinement: strict
 
 apps:
   ccd:
-    command: bin/ccd.sh
+    command: ccd.sh
 
 parts:
-  skrypt-bash:
+  ccd:
     plugin: nil
-    stage-packages:
-      - bash
-    source: .
-    organize:
-      'ccd.sh': bin/ccd.sh
