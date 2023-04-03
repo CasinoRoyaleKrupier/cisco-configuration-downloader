@@ -7,11 +7,18 @@ description: |
 
 grade: stable
 confinement: strict
+base: core18
+license: GPL-2.0
 
 apps:
-  ccd:
-    command: ccd.sh
+  cisco-configuration-downloader:
+    command: ccd
 
 parts:
   ccd:
     plugin: nil
+    source: .
+    build-packages: [bash]
+    install: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/bin/
+      cp ccd.sh $SNAPCRAFT_PART_INSTALL/bin/
