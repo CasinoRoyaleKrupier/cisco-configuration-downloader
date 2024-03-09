@@ -11,7 +11,7 @@ monit_text () {
 }
 
 date=`date +%Y-%m-%d_%H-%M-%S`
-download_file="config_$date.txt"
+download_file="running_config_$date.ios"
 
 scp_type="$1"
 scp_user="$2"
@@ -20,8 +20,8 @@ scp_host="$3"
 scp_file_destination="$PWD/$4"
 scp_file_name="${scp_file_destination##*/}"
 
-cipher="-c aes256-cbc"
-algorithms="-oKexAlgorithms=+diffie-hellman-group1-sha1"
+cipher="-c aes128-ctr"
+algorithms="-oKexAlgorithms=+diffie-hellman-group14-sha1"
 
 key="$scp_type"
 
